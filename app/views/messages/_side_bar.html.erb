@@ -3,12 +3,12 @@
     <a href="#">Tom</a>
   </div>
   <div class="new-chat-botton">
-    <%= 'チャットを作成する' , link_to new_room_path %>
+    <%= link_to 'チャットを作成する', new_room_path %>
   </div>
 </div>
 
 <div class="rooms">
-  <%= current_user.rooms.each do |room| %>
+  <% current_user.rooms.each do |room| %>
    <div class="room">
       <div class="chat-room">
        <a href="#"><%= room.name %></a>
